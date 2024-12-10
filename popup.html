@@ -8,10 +8,23 @@
   </head>
   <body>
     <div id="container">
-      <h2>Website Volume Control</h2>
-      <input id="volume-slider" type="range" min="0" max="100" step="1" />
-      <p id="volume-value">Volume: 50%</p>
-      <button id="save-volume">Save Volume</button>
+      <div class="header">
+        <h2>Website Volume Control</h2>
+        <label class="switch">
+          <input type="checkbox" id="volume-toggle" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <p>
+        Use the slider below to control the volume of the current tab. Switch to
+        any tab playing audio with just one click.
+      </p>
+      <input id="volume-slider" type="range" min="0" max="100" step="5" />
+      <p id="volume-value">Volume: 100%</p>
+      <div class="buttons">
+        <button id="save-volume">Save</button>
+        <button id="reset-volume" class="reset-btn">Reset Volume</button>
+      </div>
     </div>
     <script src="popup.js"></script>
   </body>
